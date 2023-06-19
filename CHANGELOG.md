@@ -6,16 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+Nothing unreleased yet!
+
+## [0.4.0] - 2023-06-16
+
 ### Added
 
 - Pyplot chart element
+- Config option `default_expand_messages` to enable the default expand message settings by default in the UI (breaking change)
+
+### Fixed
+
+- Scoped elements sharing names are now correctly displayed
+- Clickable Element refs are now correctly displayed, even if another ref being a substring of it exists
 
 ## [0.3.0] - 2023-06-13
 
 ### Added
 
 - Moving from sync to async runtime (breaking change):
-  - Support async implementation (eg openai, langchain) 
+  - Support async implementation (eg openai, langchain)
   - Performance improvements
   - Removed patching of different libraries
 - Elements:
@@ -74,9 +84,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Rework of the Message, AskUserMessage and AskFileMessage APIs:
-    -`cl.send_message(...)` becomes `cl.Message(...).send()`
-    -`cl.send_ask_user(...)` becomes `cl.AskUserMessage(...).send()`
-    -`cl.send_ask_file(...)` becomes `cl.AskFileMessage(...).send()`
+- `cl.send_message(...)` becomes `cl.Message(...).send()`
+- `cl.send_ask_user(...)` becomes `cl.AskUserMessage(...).send()`
+- `cl.send_ask_file(...)` becomes `cl.AskFileMessage(...).send()`
 - `update` and `remove` methods to the `cl.Message` class
 
 ### Fixed
